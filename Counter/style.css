@@ -1,0 +1,45 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.counter {
+    font-size: 2rem;
+    display: block;
+    text-align: center;
+    margin-top: 30vh;
+}
+
+p {
+    font-size: 3rem;
+    margin-top: -3vh;
+    font-weight: bold;
+}
+
+#number {
+    color: black;
+}
+
+.btns {
+    justify-content: center;
+    display: flex;
+    column-gap: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button {
+    all: unset;
+    font-weight: bold;
+    border-style: solid;
+    border-radius: 1rem;
+    border-color: black;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+button:hover {
+    color: white;
+    background-color: black;
+}
