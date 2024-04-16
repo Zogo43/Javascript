@@ -1,28 +1,37 @@
-var number = 0;
+let counter = 0;
 const plus = document.querySelector(".plus");
 const reset = document.querySelector(".reset");
 const minus = document.querySelector(".minus");
-const nummer = document.getElementById("number");
+const number = document.getElementById("number");
 
 plus.addEventListener("click", function() {
-    number = number + 1;
-    nummer.innerHTML = number;
+    counter++ ;
+    number.innerHTML = counter;
+    getColor();
 });
 
 reset.addEventListener("click", function() {
-    number = 0;
-    nummer.innerHTML = number;
+    counter = 0;
+    number.innerHTML = counter;
+    getColor();
 });
 
 minus.addEventListener("click", function() {
-    number = number - 1;
-    nummer.innerHTML = number;
+    counter-- ;
+    number.innerHTML = counter;
+    getColor();
 });
 
-if(number > 0) {
-    nummer.style.color = "green";
-};
+function getColor() {
+    if(counter > 0) {
+        number.style.color = "green";
+    };
+    
+    if(counter < 0) {
+        number.style.color = "red";
+    };
 
-if(number < 0) {
-    nummer.style.color = "red";
+    if(counter == 0) {
+        number.style.color = "black";
+    };
 };
